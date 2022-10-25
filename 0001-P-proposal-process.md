@@ -43,22 +43,22 @@ In addition, some features would require changes to SDKs or have additional requ
 
 > "Your scientists were so preoccupied with whether they could, they didn’t stop to think if they should." - Dr. Ian Malcolm (Jurassic Park)
 
-The intent of the proposal is to focus on three primary areas: 
+The goal of a proposal is to focus on two primary areas: 
 
-* _What_ the proposal is putting forth
-* _Why_ the proposal is required (what will it do for users?)
-* _How_ the proposal will work 
+* **Context:** _What_ the proposal is putting forth, and _why_ the proposal is required (what will it do for users?)
+* **Analysis / Design:** _How_ the proposal will be implemented and any background analysis of the feature
 
+### Context
 
-### A bit about the _why?_
+The first goal of a proposal is to help reviewers understand the background for the proposal; it includes a summary of the proposed feature or change as well as explanation for why it is being proposed to the community. It is intended to inform the reviewers what this proposal introduces, at a high level, and why it is valuable so that they have the appropriate context when evaluating the proposal. 
 
-In order to be effective, a proposal must provide both the background on the idea: what it is and how it works (at a high level) as well as _why it should be introduced to Dapr_. The why part of this proposal is just as important (if not more so) than what is being proposed, as it lets the reviewers understand better what kinds of use cases that the feature shall enable, how it shall make Dapr better or improve the experience of Dapr users. By going through and clarifying _why_ something should be added to Dapr, it forces us as developers to think carefully about what we are taking on as a community and how it will impact others - the benefits and potential drawbacks that it might bring.
+In order to be effective, a proposal must provide not only a description of the idea itself (what it is and how it works) but also _why it should be introduced to Dapr_. The _why_ part of this proposal is just as important (if not more so) than what is being proposed, as it lets the reviewers understand better what kinds of use cases that the feature shall enable, how it will make Dapr better technically or improve the experience of Dapr users. By going through and clarifying _why_ something should be added to Dapr it helps the community to understand how this proposal would impact users as well as the benefits and potential drawbacks that it might bring. This, in turn, helps the community to better evaluate the proposal and weight the cost/benefits of the proposed changes. 
 
-In addition, it must also convey what is in scope and what is out of scope (i.e what things have been deliberately omitted) along with any alternatives that have been considered and why they were not a good fit.
+### Analysis / Design
 
-### Design
+The second half of the process focuses on the implementation of the proposal - the goal of this part is to show the community not only how it will operate, but also provide information on how success shall be measured and also include a list of activities that must be completed in order for this proposal to be complete, what the expected lifecycle / impact of this changes is on users or Dapr, and so on. 
 
-The second half of the process focuses on the implementation of the proposal - the goal of this part is to show the community not only how it will operate, but also provide information on how success shall be measured and also include a list of activities that must be completed in order for this proposal to be complete. 
+This section of the proposal is where the authors can convey not just how a feature will work technically, but also identify what is in scope and what is out of scope (i.e what things have been deliberately omitted vs. what will be addressed as part of this proposal) along with any alternatives that have been considered and why they were not a good fit. 
 
 ## Proposed templates for Design and Build Phases
 
