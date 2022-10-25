@@ -26,7 +26,7 @@ Links to proposals that are related to this (either due to dependency, or possib
 Please link to any issues that this proposal is related to, for example, are there existing bugs filed in various Dapr repositories that this will affect?
 
 
-## Expectations and alternatives
+## Analysis
 
 * What is in scope for this proposal?
 * What is deliberately *not* in scope?
