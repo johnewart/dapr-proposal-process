@@ -88,6 +88,10 @@ The planning process for including proposals in a given release is not a part of
 
 This proposal has the advantage of increasing clarity of proposals as well as implicitly creating a record of design decisions; however, it is a little more involved and structured than the previous process, which may be viewed as a disadvantage. The authors of this proposal believe that the advantages significantly outweigh any potential disadvantages, however. 
 
+### Related work
+
+There is no need to reinvent the wheel and it is important to give credit where it is due; this proposal has taken some inspiration from the gRPC RFC process (also called "gRFC"), specifically around the naming of proposal files as well as some of the terminology and structure of the proposal template -- see [the gRPC proposal repository](github.com/grpc/proposal) for their process. 
+
 ## Implementation Details
 
 ### Completion Checklist
