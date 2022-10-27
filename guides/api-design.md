@@ -92,7 +92,7 @@ Finally on addition of a new API, there may be addition of the capability to eit
 - Conformance tests enable validating the components compliance with defined interface for the building block and creates a baseline for conformance testing any new components added. Conformance tests may be added for the new API with the understanding that it may evolve
 
 
-**Creating new API for an existing building block in **`dapr/components-contrib`**
+### Creating new API for an existing building block in **`dapr/components-contrib`**
 
 - Interfaces changes for the new API must be defined and agreed upon
 - Existing components that support the new API must be enhanced to be in compliance with the proposed interface as per the defined and agreed upon scope of the original proposal
