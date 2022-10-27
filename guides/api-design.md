@@ -33,7 +33,7 @@ APIs are expected to go through three stages in their lifetime: Alpha, Beta and 
    * API is not production ready yet
    * Multiple components implement the API and API contract is mostly finalized
    * Recommended for non-business-critical use only due to potentially backwards-incompatible changes in subsequent releases
-   * Should have support in (at least) the primary SDKs (i.e Python, Go, Java?)
+   * Should have support in (at least) the primary SDKs (i.e Python, Go, Java)
    * Performance should be production-ready but may not be in all cases
 
 * **Stable**
@@ -42,7 +42,7 @@ APIs are expected to go through three stages in their lifetime: Alpha, Beta and 
    * Performance numbers are published for the API and there are tests and safeguards in place to prevent regression
 
 
-## Requirements for API changes
+## Requirements for Dapr API changes
 
 No matter if the change is a net-new API or an update to an existing API, the following is required:
 
@@ -52,15 +52,17 @@ No matter if the change is a net-new API or an update to an existing API, the fo
 
 ### Creation of new APIs
 
+A new API is always considered as an _Alpha API_. 
+
 * Both HTTP and gRPC protocols need to be supported for the new API
 * Documentation must be provided for the API 
-  * HTTP API must be added to Dapr documentatio
+  * HTTP API must be added to the `Reference` section of Dapr documentation
 * Issues should be added in `dapr/quickstarts` to create examples for the new API to enable users to easily explore the new functionality provided by the API
 * If the new API is considered an _optimization_ of an existing API (say, the addition of `BulkGetSecrets` alongside `GetSecret`) then:
   * The performance improvement gained due to this API should be documented
   * Guidance must be provided to the users in docs as to when to use this API vs using the older one
 * Performance tests should (though preferably must) exist for this new API
-* _Must_ include new E2E tests that exercise the API
+* _Should_ include new E2E tests that exercise the API
 
 
 ### Updates to existing APIs
@@ -79,23 +81,23 @@ _Backwards-**compatible** changes_
 * Proposed changes to both the HTTP and gRPC API must be included
 
 
-## Requirements for Building Block changes
+## Requirements for Component changes
 
 Finally on addition of a new API, there may be addition of the capability to either an existing component or if it is a new building block, creation of a new set of components in the `dapr/components-contrib` repo.
 
-### Creating new API as part of a new building block in `dapr/components-contrib`**
+### Creating new API as part of a new building block in **`dapr/components-contrib`**
 
 - Interfaces to be used by `dapr/dapr` code must be defined and agreed upon
 - New building block package is defined in `components-contrib` repo, new code must only be added inside that building block package
 - Conformance tests enable validating the components compliance with defined interface for the building block and creates a baseline for conformance testing any new components added. Conformance tests may be added for the new API with the understanding that it may evolve
 
 
-**Creating new API for an existing building block in `dapr/components-contrib`**
+**Creating new API for an existing building block in **`dapr/components-contrib`**
 
 - Interfaces changes for the new API must be defined and agreed upon
 - Existing components that support the new API must be enhanced to be in compliance with the proposed interface as per the defined and agreed upon scope of the original proposal
 - Conformance tests must be updated
-  - Get sign off on a basic suite of conformance tests for the interface method(s)
+  - Get sign off on a basic suite (happy path scenarios) of conformance tests for the interface method(s)
   - Implement the suite of conformance tests as part of the existing suite of tests for the building block
 - Ensure successful execution of existing conformance and certification tests for any modified components
 
@@ -105,14 +107,14 @@ Finally on addition of a new API, there may be addition of the capability to eit
 
 ### Alpha to Beta 
 
-In addition to the requirements that are required of any Alpha API, the following requirements must be met so that the API can graduate to Beta. For an API to be promoted to Beta, it must exist for at least one release cycle after its initial addition as Alpha. (i.e something added in 1.10 could become  Beta in 1.12, having been stabilized through 1.11)
+In addition to the requirements that are required of any Alpha API as seen [above](#creation-of-new-apis), the following requirements must be met so that the API can graduate to Beta. For an API to be promoted to Beta, it must exist for at least one release cycle after its initial addition as Alpha. (i.e something added in 1.10 could become Beta in 1.12, having been stabilized through 1.11)
 
-For all APIs, the following criteria need to be met: 
+For all APIs, the following criteria must be met:
 
-* E2E test with extensive positive and negative scenarios must be defined
+* E2E test with extensive positive and negative scenarios must be defined and implemented
 * Most (if not all) changes needed in the user facing structures must be considered to be complete (in order to reduce the number of breaking changes)
-* All "core" SDKs must have support for this API _(Python, Go, .NET, Java?)_
-* Documentation of the API must be completely up-to-date with any changes tha
+* All _"core"_ SDKs must have support for this API _(Python, Go, .NET, Java)_
+* Documentation of the API must be completely up-to-date with any new changes
 * Quickstarts must be defined for the API allowing users to quickly explore the API
 * Performance tests should be added (if not already available in Alpha stage) / updated where relevant
 
@@ -123,6 +125,7 @@ For **building blocks** to progress, the following criteria are required:
 * Conformance tests must test both positive and negative cases (i.e deliberately attempt to break them)
 * Certification tests should be added to the different components and this API must be exercised in the certification tests
 * Multiple implementations must be present for this building block
+* APIs that are used in the _new_ building block, must also be in a stage to progress to Beta (the above requirements must be met)
 
 ### Beta to Stable
 
@@ -133,6 +136,8 @@ In addition to the requirements for a Beta API, the following requirements must 
 * Expected performance data must be added to documentation
 
 For **building blocks** to progress, the following must also be true:
+
+Similar to the previous phase change, a _new_ building block progressing to Stable must have all the APIs of that building block ready to progress to stable phase as well.
 
 * E2E tests must exercise _at least two different implementations_ of the building block's API
 * Conformance tests testing both positive and negative cases must be defined

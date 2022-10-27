@@ -9,7 +9,7 @@ This repository stores proposals and designs for new features in Dapr (i.e not b
 As mentioned above, any significant change that needs design and a conversation around that design should go here. As a guideline, anything that would warrant a change in the Dapr SDKs would probably require a proposal. Some specific examples would include:
 
 * New Dapr building blocks
-* New APIs or breaking API changes (especially to a non-alpha component) 
+* New APIs or breaking API changes (especially to a non-alpha building block)
 
 ## How do I create a proposal?
 
@@ -93,3 +93,12 @@ _(This is an incomplete list and should / will be expanded over time)_
 The keywords “MUST”, “MUST NOT”, "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED", "MAY", 
 and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
 
+## Guidelines for proposals
+
+The following are a list of files detailing the requirements/guidelines for different proposals within Dapr.
+
+| Section | Guide |
+|---------|-------|
+| API Design | [Link](guides/api-design.md)
+
+> Note: This section will evolve as more guidelines are establied for different types of proposal.
