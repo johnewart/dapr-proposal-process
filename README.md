@@ -29,6 +29,8 @@ Where *NNNN* is the next incremental number in the proposal repository, as a 4 d
 * B - Building block change / creation
 * P - The proposal Process itself
 * R - Runtime
+* C - Component change / creation
+* I - Dapr CLI change
 * S - Affects SDKs 
 
 So, for example, a proposal to create a new building block, such as the workflow building block, might be something like `0004-BRS-workflow-building-block.md`, whereas a change to the actor system, which does not require any changes to the SDKs themselves, would be something like `0005-R-actor-reminder-system.md`
