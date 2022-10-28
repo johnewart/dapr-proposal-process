@@ -36,6 +36,10 @@ Please link to any issues that this proposal is related to, for example, are the
 
 ## Implementation Details
 
+Related guides:
+
+* [API Design](../guides/api-design.md)
+
 ### Design
 
 How will this work, technically? Where applicable, include: 
