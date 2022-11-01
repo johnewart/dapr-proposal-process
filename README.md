@@ -39,12 +39,15 @@ So, for example, a proposal to create a new building block, such as the workflow
 * Proposal will be reviewed by the community and the author(s) of the proposal
 * The author(s) address questions/comments from the community in the proposal and adjust the proposal based on feedback
 * Once the feedback phase is complete, and a proposal has been accepted, the proposal will be merged into this repository
+* An issue needs to be created in `dapr/dapr` created from the template in `templates/lifecycle.md` to track the work that needs to be done to implement this proposal
 * Release of the feature will be slated for a specific release version of Dapr
 
 
 ## Feature lifecycle outline
 
-Features in Dapr have a lifecycle (e.g [Components](https://docs.dapr.io/operations/components/certification-lifecycle/)) and, as such, should have a defined set of milestones / requirements for progression between the lifecycle phases. For example, can a user expect from a feature when it is Alpha quality? Once that is released, what is the plan to progress from Alpha to Beta, and the subsequent expectations? What is the expectation when this feature becomes Stable? It is important to identify what functionality or perfomance guarantees we are making to users of Dapr when adding something new.
+Features in Dapr have a lifecycle (e.g [Components](https://docs.dapr.io/operations/components/certification-lifecycle/)) and, as such, need to have a defined set of milestones / requirements for progression between the lifecycle phases. For example, what can a user expect from a feature when it is Alpha quality? Once that is released, what is the plan to progress from Alpha to Beta, and the subsequent expectations? What is the expectation when this feature becomes Stable? It is important to identify what functionality or perfomance guarantees we are making to users of Dapr when adding something new.
+
+Once a proposal is accepted, this information needs to be in a GitHub issue tracking the release of this feature. The template for the issue can be found in `templates/lifecycle.md`
 
 For example, the lifecycle expectations of a "Foobar API" that is going to replace an existing API might look something like:
 
@@ -75,7 +78,7 @@ Stable:
 
 ## Proposal Language
 
-This information can be included either in the template or in a README -- and is designed to provide a common language for proposals so that the expectations are clear. 
+This section is intended to provide a common language for proposals so that expectations are clear. 
 
 
 ### Terminology 

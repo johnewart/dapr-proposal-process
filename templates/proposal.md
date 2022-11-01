@@ -48,27 +48,3 @@ How will this work, technically? Where applicable, include:
 * System diagrams
 * Code examples
 
-### Feature lifecycle outline
-
-* Expectations
-* Compatability guarantees
-* Deprecation / co-existence with existing functionality
-* Feature flags
-
-### Acceptance Criteria
-
-How will success be measured? 
-
-* Performance targets
-* Compabitility requirements
-* Metrics
-
-## Completion Checklist
-
-What changes or actions are required to make this proposal complete? Some examples:
-
-* Code changes
-* Tests added (e2e, unit)
-* SDK changes (if needed)
-* Documentation
-
