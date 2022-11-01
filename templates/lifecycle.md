@@ -1,5 +1,13 @@
 # Feature name
 
+# Links
+
+Links to any relevant resources go here:
+
+* Relevant proposal
+* Existing issues
+* Milestones
+
 # Lifecycle Expectations
 
 ## Alpha / Beta / Stable
