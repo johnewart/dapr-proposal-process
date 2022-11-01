@@ -1,4 +1,4 @@
-# Title of proposal 
+# Dapr Workflow Building Block
 
 * Author(s): John Ewart, Chris Gillum
 * State: Ready for Implementation
