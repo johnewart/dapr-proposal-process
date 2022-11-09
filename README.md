@@ -27,6 +27,8 @@ Proposal file are named in the following format:
 Where *NNNN* is the next incremental number in the proposal repository, as a 4 digit number (i.e 0001, 0002...), and *FLAGS* is one (or possibly more)  of:
 
 * B - Building block change / creation
+* C - Components 
+* I - Dapr CLI
 * P - Dapr internal processes (proposal process itself, release process, etc.)
 * R - Runtime
 * S - Affects SDKs 
