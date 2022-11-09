@@ -1,5 +1,7 @@
 # Feature name
 
+> If you need some help with determining what this should look like, see the `guidelines` directory in this repository.  
+
 # Links
 
 Links to any relevant resources go here:
